@@ -1,0 +1,48 @@
+# 0: outerloop: i = i + 1
+101,1,60,60,
+
+# 4: update i in all memory operations
+101,0,60,17,
+101,0,60,43,
+101,0,60,54,
+
+# 16: if data[i] == 0 goto end
+1006,0,59,
+
+# 19: j = i
+101,0,60,61,
+
+# 23: innerloop: j = j + 1
+101,1,61,61,
+
+# 27: update j in all memory operations
+101,0,61,40,
+101,0,61,44,
+101,0,61,55,
+
+# 39: if data[j] == 0 repeat outerloop
+1006,0,0,
+
+# 42: tmp = data[i] + data[j]
+1,0,0,62,
+
+# 46: tmp = 1 if tmp == 2020 else 0
+108,2020,62,62,
+
+# 50: if tmp == 0 repeat innerloop
+1006,62,23,
+
+# 53: tmp = data[i] * data[j]
+2,0,0,62,
+
+# 57: output value
+4,62,
+
+# 59: end
+99,
+
+# 60: temporary variable (i, j, tmp)
+62,0,0,
+
+# 63: data starts here
+1721,979,366,299,675,1456
