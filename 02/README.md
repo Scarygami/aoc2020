@@ -27,4 +27,4 @@ Part 1: `=COUNTIF(AOC[Part 1 valid],TRUE)`
 Part 2: `=COUNTIF(AOC[Part 2 valid],TRUE)`
  
 
-![Excel Screenshot](02/aoc2020_day2.png)
+![Excel Screenshot](https://raw.githubusercontent.com/Scarygami/aoc2020/main/02/aoc2020_day2.png)
