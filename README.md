@@ -7,7 +7,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 1   | IntCode                         |
 | 2   | Excel                           |
 | 3   | JavaScript (in browser console) |
-| 4   |                                 |
+| 4   | Python                          |
 | 5   |                                 |
 | 6   |                                 |
 | 7   |                                 |
