@@ -9,7 +9,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 3   | JavaScript (in browser console) |
 | 4   | Python                          |
 | 5   | Visual Studio Code / regex      |
-| 6   |                                 |
+| 6   | Python                          |
 | 7   |                                 |
 | 8   |                                 |
 | 9   |                                 |
