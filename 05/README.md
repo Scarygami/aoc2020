@@ -18,7 +18,7 @@ Solved mostly manual in Visual Studio Code.
 
 4.  Scroll to the very bottom and convert the last number to decimal to get the answer for part 1.
 
-5.  For part 2 we are first going to split the lines into blocks according the the rows.
+5.  For part 2 we are first going to split the lines into blocks according to the rows.
     Add new lines before seat 0 and after seat 7 in each row (in case we have a window seat)
 
     Search and Replace:
