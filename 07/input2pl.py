@@ -24,6 +24,7 @@ rec_contains(Parent, Count, Child) :-
 
 """
 
+
 def create_facts(filename):
     lines = []
     facts = []
@@ -47,10 +48,13 @@ def create_facts(filename):
 
     return facts
 
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("input", help="Puzzle input from Advent of Code 2020 / Day 7")
-    parser.add_argument("output", help="Generated output file in Prolog (will be overwritten)")
+    parser.add_argument(
+        "output", help="Generated output file in Prolog (will be overwritten)"
+    )
     args = parser.parse_args()
 
     if args.input == args.output:
@@ -62,6 +66,7 @@ def main():
     with open(args.output, "w") as f:
         f.write("\n".join(facts) + "\n\n")
         f.write(COMMON_CODE)
+
 
 if __name__ == "__main__":
     main()
