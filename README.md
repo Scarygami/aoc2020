@@ -11,7 +11,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 5   | Visual Studio Code / regex                      |
 | 6   | Python                                          |
 | 7   | Prolog (with Python to create facts from input) |
-| 8   |                                                 |
+| 8   | Python                                          |
 | 9   |                                                 |
 | 10  |                                                 |
 | 11  |                                                 |
