@@ -12,7 +12,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 6   | Python                                          |
 | 7   | Prolog (with Python to create facts from input) |
 | 8   | Python                                          |
-| 9   |                                                 |
+| 9   | Python                                          |
 | 10  |                                                 |
 | 11  |                                                 |
 | 12  |                                                 |
