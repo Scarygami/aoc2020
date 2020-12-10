@@ -13,7 +13,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 7   | Prolog (with Python to create facts from input) |
 | 8   | Python                                          |
 | 9   | Python                                          |
-| 10  |                                                 |
+| 10  | Octave                                          |
 | 11  |                                                 |
 | 12  |                                                 |
 | 13  |                                                 |
