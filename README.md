@@ -14,7 +14,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 8   | Python                                          |
 | 9   | Python                                          |
 | 10  | Octave                                          |
-| 11  |                                                 |
+| 11  | Octave                                          |
 | 12  |                                                 |
 | 13  |                                                 |
 | 14  |                                                 |
