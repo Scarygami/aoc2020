@@ -9,6 +9,7 @@ def parse_input(filename):
         numbers = [int(number) for number in line.split(",")]
         return numbers
 
+
 def last_turn(numbers, turns=2020):
     spoken = {}
     for index, number in enumerate(numbers[:-1]):
@@ -28,6 +29,7 @@ def last_turn(numbers, turns=2020):
 def part1(filename):
     numbers = parse_input(filename)
     return last_turn(numbers, 2020)
+
 
 def part2(filename):
     numbers = parse_input(filename)
