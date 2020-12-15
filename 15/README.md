@@ -14,5 +14,4 @@ or
 
     part1=:_1{(,-&1@:#-_1&}.i:_1&{)^:(2020&-@:#)
 
-       part1 0,3,6
-    436
+Executing `part1 0,3,6` or `part1 0 3 6` then gives the expected result `436`.
