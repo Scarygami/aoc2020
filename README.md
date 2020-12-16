@@ -19,7 +19,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 13  | Mathematics                                     |
 | 14  | Python                                          |
 | 15  | Part 1: J / Part 2: Python                      |
-| 16  |                                                 |
+| 16  | Python                                          |
 | 17  |                                                 |
 | 18  |                                                 |
 | 19  |                                                 |
