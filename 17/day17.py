@@ -38,19 +38,14 @@ def get_neighbours(coordinate):
 
 def evolve(dimension):
     new_dimension = defaultdict(int)
-    dimensions = len(list(dimension.keys())[0])
-    minimum = [
-        min(coordinate[i] for coordinate in dimension.keys()) - 1
-        for i in range(dimensions)
-    ]
-    maximum = [
-        max(coordinate[i] for coordinate in dimension.keys()) + 1
-        for i in range(dimensions)
-    ]
 
-    ranges = [range(minimum[i], maximum[i] + 1) for i in range(dimensions)]
+    candidates = []
+    for coordinate in dimension.keys():
+        candidates.append(coordinate)
+        candidates.extend(get_neighbours(coordinate))
 
-    candidates = itertools.product(*ranges)
+    candidates = set(candidates)
+
     for candidate in candidates:
         neighbours = get_neighbours(candidate)
         count = sum(dimension[neighbour] for neighbour in neighbours)
