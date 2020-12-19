@@ -22,7 +22,7 @@ My attempts at solving the daily coding challenges of [Advent of Code 2020](http
 | 16  | Python                                          |
 | 17  | Python                                          |
 | 18  | Python                                          |
-| 19  |                                                 |
+| 19  | Python                                          |
 | 20  |                                                 |
 | 21  |                                                 |
 | 22  |                                                 |
