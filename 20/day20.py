@@ -11,12 +11,11 @@ RIGHT = 1
 BOTTOM = 2
 LEFT = 3
 
+
 class Tile:
     def __init__(self, id, lines):
         self.id = id
-        self.data = [
-            [x for x in line] for line in lines
-        ]
+        self.data = [[x for x in line] for line in lines]
         self.create_orientations()
 
     def create_orientations(self):
@@ -40,9 +39,7 @@ class Tile:
 
     def inside(self, orientation):
         data = self.orientations[orientation]
-        return [
-            list(line[1:-1]) for line in data[1:-1]
-        ]
+        return [list(line[1:-1]) for line in data[1:-1]]
 
 
 def parse_input(filename):
@@ -53,9 +50,7 @@ def parse_input(filename):
     i = 0
     while i < len(lines):
         id = int(lines[i][5:9])
-        tiles.append(
-            Tile(id, lines[i+1:i+11])
-        )
+        tiles.append(Tile(id, lines[i + 1 : i + 11]))
         i = i + 12
 
     return tiles
@@ -66,11 +61,11 @@ def part1(filename):
 
     partners = defaultdict(set)
 
-    for a in range(len(tiles)-1):
+    for a in range(len(tiles) - 1):
         for o_a in range(8):
             for side in range(4):
                 border_a = tiles[a].match_border(o_a, side)
-                for b in range(a+1,len(tiles)):
+                for b in range(a + 1, len(tiles)):
                     for o_b in range(8):
                         border_b = tiles[b].match_border(o_b, (side + 2) % 4)
                         if border_a == border_b:
@@ -91,11 +86,11 @@ def part2(filename):
     matches = {}
     partners = defaultdict(set)
 
-    for a in range(len(tiles)-1):
+    for a in range(len(tiles) - 1):
         for o_a in range(8):
             for side in range(4):
                 border_a = tiles[a].match_border(o_a, side)
-                for b in range(a+1,len(tiles)):
+                for b in range(a + 1, len(tiles)):
                     for o_b in range(8):
                         border_b = tiles[b].match_border(o_b, (side + 2) % 4)
                         if border_a == border_b:
@@ -107,25 +102,28 @@ def part2(filename):
     puzzle_size = int(sqrt(len(tiles)))
     puzzle = [[None for _ in range(puzzle_size)] for _ in range(puzzle_size)]
 
-    corners = [
-        id for id, values in partners.items() if len(values) == 2
-    ]
+    corners = [id for id, values in partners.items() if len(values) == 2]
 
     corner = corners[0]
     # Find the orientation to place the corner in the top left corner
     for orientation in range(8):
-        if (corner, orientation, RIGHT) in matches and (corner, orientation, BOTTOM) in matches:
+        if (corner, orientation, RIGHT) in matches and (
+            corner,
+            orientation,
+            BOTTOM,
+        ) in matches:
             puzzle[0][0] = (corner, orientation)
             break
 
     for x in range(puzzle_size - 1):
         for y in range(puzzle_size):
-            if y < puzzle_size -1:
+            if y < puzzle_size - 1:
                 puzzle[x][y + 1] = matches[puzzle[x][y] + (RIGHT,)]
             puzzle[x + 1][y] = matches[puzzle[x][y] + (BOTTOM,)]
 
     full_puzzle = [
-        [tiles[puzzle[x][y][0]].inside(puzzle[x][y][1]) for y in range(puzzle_size)] for x in range(puzzle_size)
+        [tiles[puzzle[x][y][0]].inside(puzzle[x][y][1]) for y in range(puzzle_size)]
+        for x in range(puzzle_size)
     ]
 
     image = []
@@ -143,11 +141,7 @@ def part2(filename):
         orientations.append(deepcopy(current))
         orientations.append(deepcopy(current[::-1]))
 
-    monster = [
-        "                  # ",
-        "#    ##    ##    ###",
-        " #  #  #  #  #  #   "
-    ]
+    monster = ["                  # ", "#    ##    ##    ###", " #  #  #  #  #  #   "]
     monster_h = len(monster)
     monster_w = len(monster[0])
     image_h = len(image)
@@ -165,7 +159,9 @@ def part2(filename):
 
                 if monster_found:
                     monsters = monsters + 1
-                    for (x1, y1) in itertools.product(range(monster_h), range(monster_w)):
+                    for (x1, y1) in itertools.product(
+                        range(monster_h), range(monster_w)
+                    ):
                         if monster[x1][y1] == "#":
                             image[x + x1][y + y1] = "O"
 
