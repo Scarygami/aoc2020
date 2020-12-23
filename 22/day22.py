@@ -9,7 +9,7 @@ def parse_input(filename):
 
     split = [i for i, line in enumerate(lines) if line == ""][0]
     player1 = [int(line) for line in lines[1:split]]
-    player2 = [int(line) for line in lines[split+2:]]
+    player2 = [int(line) for line in lines[split + 2 :]]
 
     return (player1, player2)
 
@@ -30,7 +30,7 @@ def part1(filename):
     else:
         winner = player2
 
-    return sum((i+1) * value for i, value in enumerate(winner[::-1]))
+    return sum((i + 1) * value for i, value in enumerate(winner[::-1]))
 
 
 def recursive_combat(player1, player2):
@@ -63,12 +63,13 @@ def recursive_combat(player1, player2):
 
     return 2, player2
 
+
 def part2(filename):
     player1, player2 = parse_input(filename)
 
     _, cards = recursive_combat(player1.copy(), player2.copy())
 
-    return sum((i+1) * value for i, value in enumerate(cards[::-1]))
+    return sum((i + 1) * value for i, value in enumerate(cards[::-1]))
 
 
 assert part1(os.path.join(currentdir, "testinput1.txt")) == 306
