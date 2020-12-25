@@ -6,12 +6,12 @@ currentdir = os.path.dirname(os.path.abspath(__file__))
 
 
 deltas = {
-    "e": (1,0),
+    "e": (1, 0),
     "se": (0, 1),
     "sw": (-1, 1),
     "w": (-1, 0),
     "nw": (0, -1),
-    "ne": (1, -1)
+    "ne": (1, -1),
 }
 
 
@@ -44,10 +44,12 @@ def count_neighbours(lobby, position):
     neighbours = [tuple(map(sum, zip(position, delta))) for delta in deltas.values()]
     return sum(lobby[position] for position in neighbours)
 
+
 def part1(filename):
     lobby = prepare_lobby(filename)
 
     return sum(lobby.values())
+
 
 def part2(filename):
     lobby = prepare_lobby(filename)
@@ -58,7 +60,9 @@ def part2(filename):
         candidates = []
         for candidate in blacks:
             candidates.append(candidate)
-            candidates.extend([tuple(map(sum, zip(candidate, delta))) for delta in deltas.values()])
+            candidates.extend(
+                [tuple(map(sum, zip(candidate, delta))) for delta in deltas.values()]
+            )
 
         candidates = set(candidates)
 
